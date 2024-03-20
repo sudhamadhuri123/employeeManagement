@@ -1,0 +1,72 @@
+{
+	"info": {
+		"_postman_id": "e73d9f32-9e54-4a2e-8751-291a2a5a2308",
+		"name": "EmployeeManagementPostmanCollection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "9136085"
+	},
+	"item": [
+		{
+			"name": "EmployeeByID",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "AddEmployee",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"firstName\": \"sudha\",\n    \"lastName\": \"madhuri\",\n    \"emailAddress\": \"sudha.madhuri@example.com\",\n    \"phone\": \"123-456-7890\",\n    \"birthdate\": \"1990-01-01\",\n    \"jobTitle\": \"Software Engineer\",\n    \"department\": \"Engineering\",\n    \"location\": \"Texas\",\n    \"startDate\": \"2024-03-13\",\n    \"reportingManager\": \"Raj\"\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/employees/"
+			},
+			"response": []
+		},
+		{
+			"name": "deleteEmployee",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": "http://localhost:8080/employees/2"
+			},
+			"response": []
+		},
+		{
+			"name": "updateEmployee",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"firstName\": \"sudha\",\n    \"lastName\": \"madhuri\",\n    \"emailAddress\": \"sudha.madhuri@example.com\",\n    \"phone\": \"123-456-7890\",\n    \"birthdate\": \"1990-01-01\",\n    \"jobTitle\": \"Software Engineer\",\n    \"department\": \"Engineering\",\n    \"location\": \"Texas\",\n    \"startDate\": \"2024-03-13\",\n    \"reportingManager\": \"karl\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/employees/1"
+			},
+			"response": []
+		},
+		{
+			"name": "findAllEmployees",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8080/employees"
+			},
+			"response": []
+		}
+	]
+}
